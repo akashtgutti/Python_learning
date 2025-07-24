@@ -4,7 +4,7 @@
 
 st1="Gutti's laptop"
 st2='Gutti"s laptop'
-print(st1)
+print("st1 Value: ",st1)
 print(st2)
 
 # single and double quote at a time in single string
@@ -26,7 +26,7 @@ print(r"Akash\\nGutti")
 
 #if I want to do string concatination (adding).
 
-print("Akash"+"_"+"Gutti")
+print("Akash"+" "+"Gutti")
 
 #array in python
 
