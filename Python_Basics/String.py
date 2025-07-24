@@ -39,6 +39,8 @@ print(st4[:6])
 print(st4[:-6])
 print(st4[-5:])
 
+
+
 #length function in python
 
 st5=len(st4)
