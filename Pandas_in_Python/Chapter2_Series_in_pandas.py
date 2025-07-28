@@ -35,3 +35,10 @@ x1 = pd.Series(z)
 print(x1)
 
 print(x1["name"])
+
+# In Series we cannot face broadcasting issue like in numpy array.
+# If we try to access an index that does not exist, it will raise an error.
+
+s1 = pd.Series(23, index=['a', 'b', 'c', 'd', 'e'])
+s2 = pd.Series(23, index=['a', 'b', 'c'])
+print(s1+s2)
