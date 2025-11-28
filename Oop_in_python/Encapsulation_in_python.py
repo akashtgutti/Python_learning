@@ -35,3 +35,61 @@ class person:
     
 p1=person()
 print(p1.__name)
+
+# ---------------------------------------------------------------------------------------------------------------------------
+# Difference Between Protected and Private in Python (Point-wise)
+# Protected (_variable)
+
+# Starts with a single underscore _.
+
+# It is a convention, not strict enforcement.
+
+# Can be accessed within the class.
+
+# Can be accessed in child (derived) classes.
+
+# Can be accessed from outside the class, but not recommended.
+
+# No name-mangling applied.
+
+# Used when you want partial protection but still allow subclass usage.
+
+# Private (__variable)
+
+# Starts with double underscore __.
+
+# Python applies name-mangling (variable becomes _ClassName__variable).
+
+# Can be accessed only within the class.
+
+# Not accessible in child classes directly.
+
+# Cannot be accessed from outside class (unless using mangled name).
+
+# Provides stronger encapsulation than protected.
+
+# Used when you want to fully hide the variable/method.
+
+class Person:
+    def __init__(self):
+        self._age = 25  # protected
+
+class Student(Person):
+    def display(self):
+        print(self._age)  # allowed
+
+s = Student()
+print(s._age)  # possible, but discouraged
+
+
+
+class Person:
+    def __init__(self):
+        self.__salary = 50000  # private
+
+class Student(Person):
+    def display(self):
+        print(self.__salary)  #  Error
+
+p = Person()
+print(p.__salary)  #  Error
