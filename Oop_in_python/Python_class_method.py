@@ -1,5 +1,7 @@
 # Class Methods
 # Methods are functions that belong to a class. They define the behavior of objects created from the class.
+# This is a normal method that takes 'self' as the first parameter, which refers to the instance of the class.
+# The actual class method is defined using the @classmethod decorator and takes 'cls' as the first parameter, which refers to the class itself.
 
 class Bank:
     def __init__(self,account_type, bank_name):
