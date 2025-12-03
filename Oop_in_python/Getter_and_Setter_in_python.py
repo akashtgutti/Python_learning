@@ -9,3 +9,20 @@
 # Setter: The setter method is used to set or modify the value of a private attribute. It allows you to control how the value is 
 # updated, enabling validation or modification of the data before it’s actually assigned.
 
+
+#Setters
+class MyClass:
+    def _init_(self, value):
+      self._value = value
+
+    def show(self):
+      print(f"Value is {self._value}")
+
+    @property
+    def ten_value(self):
+        return 10* self ._value
+
+obj = MyClass(10)
+obj.ten_value = 67
+print(obj.ten_value)
+obj. show( )
