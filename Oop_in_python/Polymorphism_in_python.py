@@ -60,7 +60,7 @@ dog1 = Dog("Fluffy", 4)
 
 # However, notice that we have not created a common superclass or linked the classes together in any way. 
 # Even then, we can pack these two different objects into a tuple and iterate through it using a common animal variable. 
-# It is possible due to polymorphism.
+# It is possible due to a  polymorphism.
 
 for animal in (cat1, dog1):
     animal.make_sound()
