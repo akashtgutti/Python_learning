@@ -22,3 +22,37 @@ def myfunc(n):
 mydoubler = myfunc(4)
 
 print(mydoubler(11))
+
+
+# Lambda with Built-in Functions
+# Lambda functions are commonly used with built-in functions like map(), filter(), and sorted().
+
+# Using Lambda with map()
+# The map() function applies a function to every item in an iterable:
+
+numbers = [1, 2, 3, 4, 5]
+doubled = list(map(lambda x: x * 2, numbers))
+print(doubled)
+
+
+# Using Lambda with filter()
+# The filter() function creates a list of items for which a function returns True:
+
+numbers1 = [1, 2, 3, 4, 5, 6, 7, 8]
+odd_numbers = list(filter(lambda x: x % 2 != 0, numbers1))
+print(odd_numbers)
+
+# Using Lambda with sorted()
+# The sorted() function can use a lambda as a key for custom sorting:
+
+students = [("Emil", 25), ("Tobias", 22), ("Linus", 28)]
+sorted_students = sorted(students, key=lambda x: x[1])
+print(sorted_students)
+
+words = ["apple", "pie", "banana", "cherry"]
+sorted_words = sorted(words, key=lambda x: len(x))
+print(sorted_words)
+
+words1 = ["apple", "pie", "banana", "cherry"]
+sorted_words1 = sorted(words1, key=lambda x: len(x), reverse=True)
+print(sorted_words1)
